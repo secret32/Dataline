@@ -4,7 +4,7 @@ package org.sec.dataline.classfile.model;
  * @author zhou_wei
  * @since v0.1
  */
-abstract class ByteCode<V> implements ByteCodeVisitor<V> {
+public class ByteCode {
 
     public static final int MAGIC = 0XCAFEBABE;
     public static final int BYTES_MAGIC = 4;
@@ -18,25 +18,5 @@ abstract class ByteCode<V> implements ByteCodeVisitor<V> {
     public static final int BYTES_FIELDS_COUNT = 2;
     public static final int BYTES_METHODS_COUNT = 2;
     public static final int BYTES_ATTRIBUTES_COUNT = 2;
-
-    private int length;
-
-    private V value;
-
-    protected ByteCode(int length) {
-        this.length = length;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    protected void setValue(V value) {
-        this.value = value;
-    }
-
-    public V getValue() {
-        return value;
-    }
 
 }
